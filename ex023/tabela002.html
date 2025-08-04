@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(43, 255, 0);
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            position: relative;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        tbody > tr:nth-child(odd){
+            background-color: white;
+        }
+      tbody > tr:nth-child(even){
+            background-color: lightgray;
+        }
+        thead,
+        tfoot {
+            background-color: gray;
+            color: white;
+
+        }
+        thead > tr > th {
+            position: sticky;
+            top: -1;
+            background-color: gray;
+        }
+
+        td.num {
+            text-align: right;
+        }
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Uso de Tabelas Grandes</h1>
+    <!--
+    Anatomias para tabelas grandes
+    table
+        caption = legenda da tabela
+        Thead
+        Tbody
+        Tfoot
+    -->
+
+    <table>
+        <caption>População das Unidades Federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">14 554 554</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">14 554 887</td>
+            </tr>
+            <tr>
+                <td>Londrina</td>
+                <td class="num">11 445 544</td>
+            </tr>
+            <tr>
+                <td>Arapongas</td>
+                <td class="num">222 872</td>
+            </tr>
+            <tr>
+                <td>Rolandia</td>
+                <td class="num">111 872</td>
+            </tr>
+            <tr>
+                <td>Cambé</td>
+                <td class="num">55 872</td>
+            </tr>
+            <tr>
+                <td>Ibiporã</td>
+                <td class="num">44 123</td>
+            </tr>
+                        <tr>
+                <td>Arapongas</td>
+                <td class="num">222 872</td>
+            </tr>
+            <tr>
+                <td>Rolandia</td>
+                <td class="num">111 872</td>
+            </tr>
+            <tr>
+                <td>Cambé</td>
+                <td class="num">55 872</td>
+            </tr>
+            <tr>
+                <td>Ibiporã</td>
+                <td class="num">44 123</td>
+            </tr>
+                        <tr>
+                <td>Arapongas</td>
+                <td class="num">222 872</td>
+            </tr>
+            <tr>
+                <td>Rolandia</td>
+                <td class="num">111 872</td>
+            </tr>
+            <tr>
+                <td>Cambé</td>
+                <td class="num">55 872</td>
+            </tr>
+            <tr>
+                <td>Ibiporã</td>
+                <td class="num">44 123</td>
+            </tr>
+                        <tr>
+                <td>Arapongas</td>
+                <td class="num">222 872</td>
+            </tr>
+            <tr>
+                <td>Rolandia</td>
+                <td class="num">111 872</td>
+            </tr>
+            <tr>
+                <td>Cambé</td>
+                <td class="num">55 872</td>
+            </tr>
+            <tr>
+                <td>Ibiporã</td>
+                <td class="num">44 123</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de Habitantes</th>
+                <td class="num"><strong>254 544 544</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut veritatis nam quam ullam architecto placeat expedita alias facere, vero tenetur hic iste doloribus, nemo eius accusamus itaque repudiandae voluptate ipsam.lore, Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ducimus totam, dolor quaerat a hic possimus, est nisi dolore accusantium atque? Adipisci aperiam sed beatae excepturi perferendis explicabo inventore impedit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla quod quisquam magnam rem perferendis unde blanditiis incidunt at nostrum qui, soluta magni vitae ad. Deserunt nihil dignissimos voluptate vitae corrupti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam iste quae itaque deserunt, quasi ipsum a temporibus excepturi commodi nisi atque cumque vero eius deleniti ex eos? Quasi, corporis veritatis.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut veritatis nam quam ullam architecto placeat expedita alias facere, vero tenetur hic iste doloribus, nemo eius accusamus itaque repudiandae voluptate ipsam.lore, Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ducimus totam, dolor quaerat a hic possimus, est nisi dolore accusantium atque? Adipisci aperiam sed beatae excepturi perferendis explicabo inventore impedit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla quod quisquam magnam rem perferendis unde blanditiis incidunt at nostrum qui, soluta magni vitae ad. Deserunt nihil dignissimos voluptate vitae corrupti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam iste quae itaque deserunt, quasi ipsum a temporibus excepturi commodi nisi atque cumque vero eius deleniti ex eos? Quasi, corporis veritatis.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut veritatis nam quam ullam architecto placeat expedita alias facere, vero tenetur hic iste doloribus, nemo eius accusamus itaque repudiandae voluptate ipsam.lore, Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ducimus totam, dolor quaerat a hic possimus, est nisi dolore accusantium atque? Adipisci aperiam sed beatae excepturi perferendis explicabo inventore impedit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla quod quisquam magnam rem perferendis unde blanditiis incidunt at nostrum qui, soluta magni vitae ad. Deserunt nihil dignissimos voluptate vitae corrupti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam iste quae itaque deserunt, quasi ipsum a temporibus excepturi commodi nisi atque cumque vero eius deleniti ex eos? Quasi, corporis veritatis.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut veritatis nam quam ullam architecto placeat expedita alias facere, vero tenetur hic iste doloribus, nemo eius accusamus itaque repudiandae voluptate ipsam.lore, Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ducimus totam, dolor quaerat a hic possimus, est nisi dolore accusantium atque? Adipisci aperiam sed beatae excepturi perferendis explicabo inventore impedit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla quod quisquam magnam rem perferendis unde blanditiis incidunt at nostrum qui, soluta magni vitae ad. Deserunt nihil dignissimos voluptate vitae corrupti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam iste quae itaque deserunt, quasi ipsum a temporibus excepturi commodi nisi atque cumque vero eius deleniti ex eos? Quasi, corporis veritatis.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut veritatis nam quam ullam architecto placeat expedita alias facere, vero tenetur hic iste doloribus, nemo eius accusamus itaque repudiandae voluptate ipsam.lore, Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ducimus totam, dolor quaerat a hic possimus, est nisi dolore accusantium atque? Adipisci aperiam sed beatae excepturi perferendis explicabo inventore impedit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla quod quisquam magnam rem perferendis unde blanditiis incidunt at nostrum qui, soluta magni vitae ad. Deserunt nihil dignissimos voluptate vitae corrupti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam iste quae itaque deserunt, quasi ipsum a temporibus excepturi commodi nisi atque cumque vero eius deleniti ex eos? Quasi, corporis veritatis.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut veritatis nam quam ullam architecto placeat expedita alias facere, vero tenetur hic iste doloribus, nemo eius accusamus itaque repudiandae voluptate ipsam.lore, Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ducimus totam, dolor quaerat a hic possimus, est nisi dolore accusantium atque? Adipisci aperiam sed beatae excepturi perferendis explicabo inventore impedit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla quod quisquam magnam rem perferendis unde blanditiis incidunt at nostrum qui, soluta magni vitae ad. Deserunt nihil dignissimos voluptate vitae corrupti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam iste quae itaque deserunt, quasi ipsum a temporibus excepturi commodi nisi atque cumque vero eius deleniti ex eos? Quasi, corporis veritatis.</p>
+</body>
+
+</html>
