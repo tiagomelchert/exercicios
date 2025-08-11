@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Status de Luzes com Imagem</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+
+    .sistema {
+      position: relative;
+      max-width: 100%;
+    }
+
+    .imagem-fundo {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .luz {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: rgb(153, 153, 153); /* apagada */
+      border: 2px solid rgb(214, 206, 206);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s;
+    }
+
+    .ativa {
+      background-color: limegreen;
+      box-shadow: 0 0 10px limegreen;
+    }
+
+    /* Ajuste de posição das luzes sobre a imagem */
+    #luz1 { top: 20px; left: 55px; }
+    #luz2 { top: 22px; left: 145px; }
+    #luz3 { top: 22px; left: 250px; }
+    #luz4 { top: 22px; left: 330px; }
+
+    @media (max-width: 600px) {
+      .sistema {
+        transform: rotate(90deg) scale(0.6); /* gira e ajusta tamanho */
+        transform-origin: top left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Status de Luzes - Visual com Imagem</h2>
+
+  <div class="sistema">
+    <img class="imagem-fundo" src="sua-imagem.png" alt="Esquema do sistema" />
+    <div id="luz1" class="luz"></div>
+    <div id="luz2" class="luz"></div>
+    <div id="luz3" class="luz"></div>
+    <div id="luz4" class="luz"></div>
+  </div>
+
+  <script>
+    // Simulação de variáveis booleanas (substituir por dados reais)
+    const status = {
+      luz1: true,
+      luz2: false,
+      luz3: true,
+      luz4: true
+    };
+
+    for (let i = 1; i <= 4; i++) {
+      const luz = document.getElementById(`luz${i}`);
+      if (status[`luz${i}`]) {
+        luz.classList.add('ativa');
+      } else {
+        luz.classList.remove('ativa');
+      }
+      
+    }
+  </script>
+
+</body>
+</html>
