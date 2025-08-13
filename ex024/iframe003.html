@@ -1,36 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uso de Iframe</title>
     <style>
-        body{
+        body {
             font-family: Arial, Helvetica, sans-serif;
         }
-        iframe#tela{
+
+        iframe#tela {
             width: 95vw;
             height: 400px;
         }
+
+        iframe#video {
+            display: block;
+            margin: auto;
+        }
     </style>
 </head>
+
 <body>
     <h1>Faça uma escolha</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, commodi. Et sapiente quo excepturi repudiandae, porro necessitatibus ullam impedit reprehenderit eius voluptate, harum dolor voluptatum accusantium voluptas quam minus! Nihil. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nobis quaerat aliquid maxime repellendus, repudiandae quisquam sint odio earum deleniti molestias est quae vitae culpa, aut eligendi dolorem debitis! Natus!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, commodi. Et sapiente quo excepturi
+        repudiandae, porro necessitatibus ullam impedit reprehenderit eius voluptate, harum dolor voluptatum accusantium
+        voluptas quam minus! Nihil. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nobis quaerat aliquid
+        maxime repellendus, repudiandae quisquam sint odio earum deleniti molestias est quae vitae culpa, aut eligendi
+        dolorem debitis! Natus!</p>
 
-<ul>
-    <li><a href="telas-extras/pag001.html" target="frame">Primeira Pagina</a></li>
-    <li><a href="telas-extras/pag002.html" target="frame">Segunda Pagina</a></li>
-    <li><a href="telas-extras/pag003.html" target="frame">Terceira Pagina</a></li>
-</ul>
+    <ul>
+        <li><a href="telas-extras/pag001.html" target="frame">Primeira Pagina</a></li>
+        <li><a href="telas-extras/pag002.html" target="frame">Segunda Pagina</a></li>
+        <li><a href="telas-extras/pag003.html" target="frame">Terceira Pagina</a></li>
+    </ul>
 
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, earum? Natus deleniti ab quod! Nesciunt deserunt magnam aspernatur iure, perspiciatis unde repellendus, blanditiis, numquam facere veniam ex fuga adipisci possimus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias odio harum, illo cupiditate molestiae cum quos, necessitatibus iure nostrum quod aspernatur, labore consequuntur incidunt? Ex delectus incidunt minima voluptate ullam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, esse molestias corrupti adipisci consequatur facere libero reprehenderit quia sunt? Porro, corporis. Ipsa optio omnis provident, explicabo ipsum placeat facere perspiciatis?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, earum? Natus deleniti ab quod! Nesciunt deserunt
+        magnam aspernatur iure, perspiciatis unde repellendus, blanditiis, numquam facere veniam ex fuga adipisci
+        possimus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias odio harum, illo cupiditate molestiae
+        cum quos, necessitatibus iure nostrum quod aspernatur, labore consequuntur incidunt? Ex delectus incidunt minima
+        voluptate ullam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, esse molestias corrupti adipisci
+        consequatur facere libero reprehenderit quia sunt? Porro, corporis. Ipsa optio omnis provident, explicabo ipsum
+        placeat facere perspiciatis?</p>
 
-    <Iframe id="tela" name="frame" srcdoc="<h1> Escolha uma das Opções acima.</h1> <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis quibusdam culpa doloremque aspernatur expedita aliquid a dolor voluptatum repudiandae quisquam cum autem dolorum accusantium, voluptates sunt quos fuga saepe. Consequatur. </p><img src='img/foto01.png'>"> 
+    <Iframe id="tela" name="frame"
+        srcdoc="<h1> Escolha uma das Opções acima.</h1> <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis quibusdam culpa doloremque aspernatur expedita aliquid a dolor voluptatum repudiandae quisquam cum autem dolorum accusantium, voluptates sunt quos fuga saepe. Consequatur. </p><img src='img/foto01.png'>">
         <p>Infelizmente seu navegador nao é compativel com isso.</p>
     </Iframe>
-    
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, earum? Natus deleniti ab quod! Nesciunt deserunt magnam aspernatur iure, perspiciatis unde repellendus, blanditiis, numquam facere veniam ex fuga adipisci possimus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias odio harum, illo cupiditate molestiae cum quos, necessitatibus iure nostrum quod aspernatur, labore consequuntur incidunt? Ex delectus incidunt minima voluptate ullam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, esse molestias corrupti adipisci consequatur facere libero reprehenderit quia sunt? Porro, corporis. Ipsa optio omnis provident, explicabo ipsum placeat facere perspiciatis?</p>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, earum? Natus deleniti ab quod! Nesciunt deserunt
+        magnam aspernatur iure, perspiciatis unde repellendus, blanditiis, numquam facere veniam ex fuga adipisci
+        possimus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias odio harum, illo cupiditate molestiae
+        cum quos, necessitatibus iure nostrum quod aspernatur, labore consequuntur incidunt? Ex delectus incidunt minima
+        voluptate ullam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, esse molestias corrupti adipisci
+        consequatur facere libero reprehenderit quia sunt? Porro, corporis. Ipsa optio omnis provident, explicabo ipsum
+        placeat facere perspiciatis?</p>
+
+
+    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/JQeiTbwz38g?si=0mP1wv2CVOJ4WOAX"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </body>
 
 </html>
