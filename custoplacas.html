@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Calculadora de Custos – Placas ABS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    padding: 15px;
+}
+.container {
+    max-width: 520px;
+    margin: auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+h2 {
+    text-align: center;
+}
+.section {
+    margin-top: 15px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+label {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+}
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 3px;
+}
+button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    font-size: 16px;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+.resultado {
+    margin-top: 15px;
+    background: #eef2f6;
+    padding: 12px;
+    border-radius: 6px;
+}
+.total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0d6efd;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Calculadora – Placas ABS</h2>
+
+<div class="section">
+<b>Chapa</b>
+<label>Largura chapa (cm)</label>
+<input id="larguraChapa" type="number">
+
+<label>Comprimento chapa (cm)</label>
+<input id="comprimentoChapa" type="number">
+
+<label>Valor da chapa (R$)</label>
+<input id="valorChapa" type="number">
+</div>
+
+<div class="section">
+<b>Placa</b>
+<label>Largura placa (cm)</label>
+<input id="larguraPlaca" type="number">
+
+<label>Comprimento placa (cm)</label>
+<input id="comprimentoPlaca" type="number">
+</div>
+
+<div class="section">
+<b>Dupla face</b>
+<label>Valor do metro (R$)</label>
+<input id="valorDupla" type="number">
+
+<label>Metros usados</label>
+<input id="metrosDupla" type="number" step="0.01">
+</div>
+
+<div class="section">
+<b>Produção</b>
+<label>Tempo (h)</label>
+<input id="tempo" type="number" step="0.01">
+
+<label>Hora máquina (R$/h)</label>
+<input id="hora" type="number">
+</div>
+
+<div class="section">
+<b>Outros</b>
+<label>Embalagem (R$)</label>
+<input id="embalagem" type="number">
+
+<label>Margem (%)</label>
+<input id="margem" type="number">
+</div>
+
+<button onclick="calcular()">Calcular</button>
+
+<div id="resultado" class="resultado"></div>
+
+</div>
+
+<script>
+function calcular() {
+
+    const lc = parseFloat(document.getElementById("larguraChapa").value);
+    const cc = parseFloat(document.getElementById("comprimentoChapa").value);
+    const vc = parseFloat(document.getElementById("valorChapa").value);
+
+    const lp = parseFloat(document.getElementById("larguraPlaca").value);
+    const cp = parseFloat(document.getElementById("comprimentoPlaca").value);
+
+    const vd = parseFloat(document.getElementById("valorDupla").value);
+    const md = parseFloat(document.getElementById("metrosDupla").value);
+
+    const t  = parseFloat(document.getElementById("tempo").value);
+    const h  = parseFloat(document.getElementById("hora").value);
+
+    const emb = parseFloat(document.getElementById("embalagem").value);
+    const margem = parseFloat(document.getElementById("margem").value);
+
+    if ([lc,cc,vc,lp,cp,vd,md,t,h,emb,margem].some(v => isNaN(v) || v < 0)) {
+        document.getElementById("resultado").innerHTML =
+            "⚠️ Preencha todos os campos corretamente.";
+        return;
+    }
+
+    const areaChapa = lc * cc;
+    const custoCm2 = vc / areaChapa;
+
+    const areaPlaca = lp * cp;
+    const custoPlaca = areaPlaca * custoCm2;
+
+    const custoDupla = vd * md;
+    const custoProd = t * h;
+
+    const custoTotal = custoPlaca + custoDupla + custoProd + emb;
+    const precoVenda = custoTotal * (1 + margem / 100);
+
+    document.getElementById("resultado").innerHTML = `
+        <b>Custo por cm²:</b> R$ ${custoCm2.toFixed(4)}<br>
+        <b>Área da placa:</b> ${areaPlaca.toFixed(2)} cm²<br>
+        <b>Custo da placa:</b> R$ ${custoPlaca.toFixed(2)}<br><br>
+
+        <b>Dupla face:</b> R$ ${custoDupla.toFixed(2)}<br>
+        <b>Produção:</b> R$ ${custoProd.toFixed(2)}<br>
+        <b>Embalagem:</b> R$ ${emb.toFixed(2)}<br><br>
+
+        <div class="total">CUSTO TOTAL: R$ ${custoTotal.toFixed(2)}</div>
+        <div class="total">PREÇO DE VENDA: R$ ${precoVenda.toFixed(2)}</div>
+    `;
+}
+</script>
+
+</body>
+</html>
